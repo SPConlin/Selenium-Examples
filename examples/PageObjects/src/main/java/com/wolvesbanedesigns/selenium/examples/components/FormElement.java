@@ -19,7 +19,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * @author Shawn
+ * @author Shawn P. Conlin
  *
  */
 public class FormElement implements WebElement {

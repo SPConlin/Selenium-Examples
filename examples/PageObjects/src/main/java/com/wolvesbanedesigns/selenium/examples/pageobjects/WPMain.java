@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import com.wolvesbanedesigns.selenium.examples.components.FormElement;
 
 /**
- * @author Shawn
+ * @author Shawn P. Conlin
  *
  */
 public class WPMain extends BasePage {
@@ -24,10 +24,19 @@ public class WPMain extends BasePage {
 		super(driver);
 	}
 	
+	/**
+	 * Check if the specified text is present in the page header
+	 * @param expectedTitle
+	 * @return
+	 */
 	public boolean verifyPageHeaderTitle(String expectedTitle) {
 		return this.isTextPresent(PAGE_HEADER_TITLE, expectedTitle, 5);
 	}
 	
+	/**
+	 * Search for the specified test using the search box in the primary side bar.
+	 * @param term
+	 */
 	public void performSearch(String term) {
 		FormElement searchBox = new FormElement(webDriver, TXTFLD_SEARCH);
 		searchBox.setValue(term, 5);
